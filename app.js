@@ -1,14 +1,9 @@
 const express = require('express');
 const morgan = require('morgan');
 const app = express();
-
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
-
-if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('dev'));
-}
-
+const db = require('./config/mongoose');
 app.use(express.json());
 
 app.use(express.static(`${__dirname}/public`));
