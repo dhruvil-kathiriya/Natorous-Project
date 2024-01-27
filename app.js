@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const app = express();
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
-const db = require('./config/mongoose');
+
 app.use(express.json());
 
 app.use(express.static(`${__dirname}/public`));
