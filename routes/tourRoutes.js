@@ -18,4 +18,6 @@ router
   .patch(tourcontroller.updateTour)
   .delete(tourcontroller.deleteTour);
 
+router.route('/tour-stats').get(tourcontroller.getTourstats);
+
 module.exports = router;
